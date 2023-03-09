@@ -6,45 +6,55 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3fb;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.post-container{
+.main-container{
   width: 100%;
   height: 100%;
-  max-width: 1000px;
   margin: 2rem auto;
-  gap: 30px;
+}
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+   overflow: hidden;
 }
 
-.profile-card{
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.816);
 
-}
-.profile-card img{
+.comments-container{
   width: 100%;
   height: 100%;
-  max-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 1.5rem;
+  padding: 0;
 }
-.profile-card a{
-  display: inline-block;
-  margin-top: 20px;
-  color: red;
-  font-size: 20px;
-  border: 2px solid black;
-  padding: .5rem 1rem;
-  text-decoration: none;
-  
+
+.comment{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px 4px #bcbccc;
+}
+li{
+  list-style-type: none;
+}
+.comments-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
 }
 @media screen and (min-width:768px) {
-  .post-container{
-    display: grid;
+  .comments-container{
     grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
   }
   
 }
