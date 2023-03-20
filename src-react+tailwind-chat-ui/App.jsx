@@ -7,4 +7,4 @@ const App = () => {
   return <Register />;
 };
 
-export default App;
+export default App;. 
